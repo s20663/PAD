@@ -29,15 +29,15 @@ if __name__ == "__main__":
         print(item, end=" ")
 
     print("\n-=-=-=-")
-    gen = repeat(5)
-    for _ in range(15):
-        print(next(gen), end=" ")
-    print("\n-=-=-=-")
+    # gen = repeat(5)
+    # for _ in range(15):
+    #     print(next(gen), end=" ")
+    # print("\n-=-=-=-")
 
-    for item in repeat(5):
-        print(item, end="")
-    print("\n-=-=-=-")
-
-    for item in repeat(5, None):
-        print(item, end="")
-    print("\n-=-=-=-")
+    # for item in repeat(5):
+    #     print(item, end="")
+    # print("\n-=-=-=-")
+    #
+    # for item in repeat(5, None):
+    #     print(item, end="")
+    # print("\n-=-=-=-")

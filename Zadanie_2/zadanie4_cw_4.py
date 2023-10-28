@@ -21,19 +21,17 @@ class Pojazd:
 
 
 class Autobus(Pojazd):
-    def __init__(self, predkosc_max, przebieg, nazwa_modelu, liczba_miejsc=50):
-        super().__init__(predkosc_max, przebieg, nazwa_modelu)
-        self.liczba_miejsc = liczba_miejsc
+    def liczba_miejsc(self, miejsca=70):
+        return super().liczba_miejsc(miejsca)
 
-    def opłata(self, cena_podstawowa=100):
-        opłata_podstawowa = super().opłata(self.liczba_miejsc, cena_podstawowa)
-        return opłata_podstawowa + (0.1 * opłata_podstawowa)
+    def opłata(self, miejsca):
+        return super().opłata(miejsca) * 1.1
 
 
 pojazd1 = Pojazd(240, 50, "Pojazd A")
-autobus1 = Autobus(300, 20, "Autobus XYZ", 50)
+autobus1 = Autobus(300, 20, "Autobus XYZ")
 
 if __name__ == "__main__":
     print(f"Opłata za pojazd: {pojazd1.opłata(10)}")
     print(pojazd1.liczba_miejsc(10))
-    print(f"Opłata za autobus: {autobus1.opłata()}")
+    print(f"Opłata za autobus: {autobus1.opłata(10)}")
