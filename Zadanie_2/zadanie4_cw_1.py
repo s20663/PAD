@@ -57,7 +57,6 @@ for value in tet:
 
 #Druga metoda
 
-
 def cache_tetranacci(func):
     cached_values = {}
 
